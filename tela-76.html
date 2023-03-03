@@ -4,7 +4,9 @@
 <div>
     <div style="display: flex;height: 380px;align-items: center;justify-content: space-around;">
         <div style="width: 430px;">
-            <p>A Análise de Situação de Saúde (ASIS) traz informações necessárias
+            <p><span id="hotWord-bt" style="background-color:#2f5579; color: white;">A Análise de Situação
+                    de Saúde</span> (ASIS) traz
+                informações necessárias
                 sobre a caracterização da sua região, município, estado e país – e
                 assim o gestor consegue realizar ações para prevenção e controle de
                 determinadas doenças ou agravos, conforme a figura ao lado.</p>
@@ -17,3 +19,23 @@
 <footer style="padding: 0; height: 40px;">
     <img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM03_2.svg" style="width: 100%;">
 </footer>
+<div id="conteudo"
+    style="position: absolute;top: 255px;left: 10px;width: 355px;height: 134px;background: 0% 0% no-repeat padding-box padding-box rgb(70, 181, 195);display: flex;align-items: center;justify-content: center;padding: 10px;">
+    <p style="color: #FFFFFF;">Ações de monitoramento contínuo da situação de saúde da população do
+        País,
+        Estado, Região, Município ou áreas de abrangência de equipes de atenção à saúde, por estudos e análises que
+        identifiquem e expliquem problemas de saúde e o comportamento dos principais indicadores de saúde,
+        contribuindo
+        para um planejamento de saúde abrangente.</p>
+</div>
+<script>
+    $(() => {
+        let conteudo = $('#conteudo').hide();
+        $('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+            conteudo.fadeIn()
+        })
+        $('#hotWord-bt').mouseout(() => {
+            conteudo.fadeOut()
+        })
+    })
+</script>

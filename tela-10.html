@@ -1,0 +1,112 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM03_1.svg" style="width: 100%;margin-top: 10px;">
+</div>
+<div class="coluna-esquerda largura-1_1 "
+    style="display: flex;justify-content: center;align-items: center;height: 380px;">
+    <div style="width: 90%;">
+        <p>É possível perceber que a PNVS é transversal a todas as ações e serviços de vigilância em saúde, está
+            relacionada à compreensão
+            e à articulação de saberes, processos e práticas da vigilância.</p>
+        <p>Quando falamos em vigilância em saúde, estamos abrangendo as <b>quatro vigilâncias!</b></p>
+        <p>Mas quais são as ações de cada componente da vigilância em saúde? <b style="color: #7abd9a;">Clique nos
+                cartões e conheça.</b></p>
+        <div style="display: flex;justify-content: space-evenly;">
+            <img id="botao_1" src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM02a.svg" style="cursor: pointer;">
+            <img id="botao_2" src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM02b.svg" style="cursor: pointer;">
+            <img id="botao_3" src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM02c.svg" style="cursor: pointer;">
+            <img id="botao_4" src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM02d.svg" style="cursor: pointer;">
+        </div>
+    </div>
+    <div>
+        <div class="jan" id="janela_1"
+            style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
+            <div
+                style="background-color: #0c486c;display: flex;width: 510px;height: 160px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
+                <div style="color: white;">
+                    <p>A <b>vigilância epidemiológica</b> é informação para ação! É coletar e processar os dados;
+                        analisar e
+                        interpretar os dados processados; divulgar as informações; investigar casos e surtos – que
+                        também é papel de todas as demais vigilâncias; e recomendar e promover medidas de controle
+                        das
+                        doenças e agravos.</p>
+                    <p>Resumindo, a Vigilância Epidemiológica tem um propósito de fornecer orientação técnica
+                        permanente para os que têm a responsabilidade de decidir sobre a execução de ações de
+                        controle
+                        de doenças e agravos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="jan" id="janela_2"
+            style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
+            <div
+                style="background-color: #0c486c;display: flex;width: 510px;height: 170px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
+                <div style="color: white;">
+                    <p>A <b>vigilância em saúde ambiental</b> atua na detecção ou prevenção de qualquer mudança nos
+                        fatores
+                        determinantes e condicionantes do ambiente que interferem na saúde humana, com recomendações
+                        e
+                        adotando medidas de prevenção e controle dos fatores de risco, relacionados às doenças e
+                        outros
+                        agravos à saúde que estejam ligados ao ambiente, como: Qualidade da água para consumo
+                        humano,
+                        ar, solo; desastres de origem natural, mudanças climáticas, substâncias químicas, acidentes
+                        com
+                        produtos perigosos, fatores físicos, e ambiente de trabalho.</p>
+                </div>
+            </div>
+        </div>
+        <div class="jan" id="janela_3"
+            style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
+            <div
+                style="background-color: #0c486c;display: flex;width: 510px;height: 120px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
+                <div style="color: white;">
+                    <p>A <b>vigilância sanitária</b> envolve ações direcionadas para eliminar, mitigar ou prevenir
+                        riscos à
+                        saúde e de intervir nos problemas sanitários, também atua em investigação de surtos, na
+                        produção
+                        e circulação de bens e na prestação de serviços de interesse da saúde. </p>
+                </div>
+            </div>
+        </div>
+        <div class="jan" id="janela_4"
+            style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
+            <div
+                style="background-color: #0c486c;display: flex;width: 510px;height: 110px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
+                <div style="color: white;">
+                    <p>A <b>vigilância em saúde do trabalhador</b> caracteriza-se por ser um conjunto de atividades
+                        destinadas
+                        à promoção e proteção, recuperação e reabilitação da saúde dos trabalhadores submetidos aos
+                        riscos, doenças e agravos advindos das condições de trabalho.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0; height: 40px;">
+    <img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM03_2.svg" style="width: 100%;">
+</footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

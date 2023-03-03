@@ -1,0 +1,126 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM03_1.svg" style="width: 100%;margin-top: 10px;">
+</div>
+<div class="coluna-esquerda largura-1_1 "
+    style="display: flex;justify-content: center;align-items: center;height: 380px;">
+    <div style="width: 75%;">
+        <p>Os tipos fundamentais de vigilância que podem ser realizados nos serviços de saúde são: vigilância
+            passiva,
+            vigilância ativa e vigilância sentinela. <b style="color: #7abd9a;">Clique e conheça suas
+                definições</b>.
+        </p>
+        <div style="display: flex;justify-content: space-evenly;margin-top: 80px;">
+            <img id="botao_1" src="recursos/icones/PEPTS_EPIVISA_M1U1_RIM26a.svg"
+                style="width: 160px; cursor: pointer;">
+            <img id="botao_2" src="recursos/icones/PEPTS_EPIVISA_M1U1_RIM26b.svg"
+                style="width: 160px; cursor: pointer;">
+            <img id="botao_3" src="recursos/icones/PEPTS_EPIVISA_M1U1_RIM26c.svg"
+                style="width: 160px; cursor: pointer;">
+        </div>
+    </div>
+    <div class="jan" id="janela_1"
+        style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
+        <div
+            style="background-color: #0c486c;display: flex;width: 220px;height: 230px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
+            <div>
+                <p style="color: white; font-weight: bold;">Vigilância passiva</p>
+                <p style="color: white;">Cada nível de saúde envia
+                    informação de forma rotineira e
+                    periódica sobre os eventos sujeitos
+                    à vigilância ao nível imediatamente
+                    superior. Tem a vantagem de ser
+                    fácil, de baixo custo e, portanto, é
+                    mais sustentável no tempo. A
+                    maioria das vigilâncias rotineiras é
+                    passiva, onde espera-se que os
+                    profissionais de saúde informem
+                    todos os casos de doenças/agravos
+                    notificáveis por eles atendidos.</p>
+            </div>
+        </div>
+    </div>
+    <div class="jan" id="janela_2"
+        style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
+        <div
+            style="background-color: #0c486c;display: flex;width: 400px;height: 230px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
+            <div>
+                <p style="color: white; font-weight: bold;">Vigilância ativa</p>
+                <p style="color: white;">A equipe de saúde faz busca ativa de
+                    suspeitos ou casos, recorre à fonte de
+                    informação para realizar uma busca
+                    intencional de casos do evento sujeito à
+                    vigilância. Os profissionais da equipe de
+                    saúde buscam diretamente os dados
+                    objetos de vigilância, revisando até mesmo
+                    os registros rotineiros e diários de atenção
+                    às pessoas. A vigilância ativa está
+                    particularmente indicada em situações
+                    como: doenças em fase de erradicação e
+                    eliminação (poliomielite, sarampo, etc.),
+                    danos de alta prioridade sanitária
+                    (mortalidade infantil, mortalidade
+                    materna, etc.), após uma exposição
+                    ambiental da comunidade (dejetos tóxicos,
+                    poluição no sistema de abastecimento de
+                    água, etc.) ou durante e imediatamente
+                    depois de uma epidemia.</p>
+            </div>
+        </div>
+    </div>
+    <div class="jan" id="janela_3"
+        style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
+        <div
+            style="background-color: #0c486c;display: flex;width: 420px;height: 230px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
+            <div>
+                <p style="color: white; font-weight: bold;">Vigilância sentinela</p>
+                <p style="color: white;">Baseia-se na informação proporcionada
+                    por um grupo selecionado como fonte de
+                    notificação do sistema ("unidades
+                    sentinelas") que se comprometem a
+                    estudar uma amostra pré-concebida
+                    ("amostra sentinela") de indivíduos de um
+                    grupo populacional específico, no qual é
+                    avaliada a presença de um evento de
+                    interesse para a vigilância ("condição
+                    sentinela"). Esse tipo de vigilância permite
+                    estudar as tendências de certos eventos
+                    de interesse. A vigilância sentinela pode
+                    utilizar o formato da vigilância ativa ou da
+                    passiva; uma de suas aplicações é para a
+                    vigilância das doenças emergentes ou
+                    reemergentes, ou naqueles lugares nos
+                    quais as condições socioeconômicas não
+                    permitem ter um sistema de vigilância
+                    passiva com representatividade nacional.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0; height: 40px;">
+    <img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM03_2.svg" style="width: 100%;">
+</footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

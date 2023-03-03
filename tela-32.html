@@ -1,0 +1,81 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM03_1.svg" style="width: 100%;margin-top: 10px;">
+</div>
+<div class="coluna-esquerda largura-1_1 "
+    style="display: flex;justify-content: center;align-items: center;height: 380px;">
+    <div style="width: 85%;">
+        <p><b>Você percebeu a importância da intersetorialidade na PNVS?</b></p>
+        <p>Para promover as ações de saúde para o bem comum, precisamos integrar não só as vigilâncias da gestão do
+            SUS
+            como
+            também outros órgãos federais! Como exemplo, observamos, com a pandemia da covid-19, a Anvisa atuando em
+            conjunto
+            com as vigilâncias estaduais, municipais e outros órgãos no ponto de entrada em aeroportos, portos e
+            fronteiras.</p>
+        <div id="botao_1" class="animate__animated animate__backInLeft"
+            style="display: flex;align-items: center;justify-content: space-around;margin: 30px 0px 0px;">
+            <div
+                style="background-color: #0c486c;display: flex;align-items: center;justify-content: space-around;width: 560px;height: 120px;border-radius: 22px;">
+                <img src="recursos/icones/exemplo.svg" style="width: 80px;">
+                <p style="color: white;">Clique aqui e conheça algumas ações da covid-19 em pontos de
+                    entrada</p>
+            </div>
+        </div>
+        <div class="jan" id="janela_1" style="display: flex;align-items: center;justify-content: space-around;">
+            <div
+                style="background-color: #0c486c;display: flex;align-items: center;justify-content: space-around;width: 730px;height: 350px;border-radius: 22px;">
+                <img src="recursos/icones/exemplo.svg" style="width: 80px;">
+                <div>
+                    <p style="width: 590px;color: white;">Ações na pandemia da covid-19 em pontos de entrada:</p>
+                    <p style="width: 590px;color: white;">
+                        - orientações com relação à utilização adequada de máscaras, à vacinação, distribuição de
+                        material
+                        informativo em português e inglês, disponível nas páginas oficiais da Anvisa;<br>
+                        - disponibilização e monitoramento dos avisos sonoros em inglês, português, mandarim e espanhol,
+                        nos terminais e navios de cruzeiro, sobre os sinais e os sintomas da infecção por coronavírus,
+                        bem
+                        como sobre os cuidados básicos para evitar a doença;<br>
+                        - sensibilização das equipes de vigilância sanitária e dos postos médicos para detecção de casos
+                        suspeitos e utilização de equipamento de proteção individual;<br>
+                        - reforço para que a Declaração Marítima de Saúde (DMS) e Declaração de Saúde do Viajante (DSV)
+                        estivesse preenchida corretamente;<br>
+                        - orientação para intensificação dos procedimentos de limpeza e desinfecção nos meios de
+                        transporte;<br>
+                        - para os navios, a exigência do Livro Médico de Bordo (medical logbook), no momento da
+                        solicitação do Certificado de Livre Prática (CLP), para o conhecimento e a avaliação das
+                        ocorrências
+                        de saúde a bordo antes da autorização para atracação e operação;
+                        Entre muitas outras ações.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0; height: 40px;">
+    <img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM03_2.svg" style="width: 100%;">
+</footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

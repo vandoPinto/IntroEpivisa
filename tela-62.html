@@ -1,0 +1,124 @@
+<div class="largura-1_1">
+    <img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM03_1.svg" style="width: 100%;margin-top: 10px;">
+</div>
+<div class="coluna-esquerda largura-1_1 "
+    style="display: flex;justify-content: space-evenly;align-items: center;height: 380px;align-content: space-around;">
+    <div style="width: 94%;">
+        <p><b style="color: #7abd9a;">Clique em cada um dos ícones</b> e conheça um pouco mais sobre os exemplos de
+            fontes mais comuns para vigilância em saúde pública:</p>
+        <div style="display: flex;justify-content: space-evenly;margin-top: 60px;">
+            <img id="botao_1" src="recursos/icones/PEPTS_EPIVISA_M1U1_RIM25a.svg" style="cursor: pointer;">
+            <img id="botao_2" src="recursos/icones/PEPTS_EPIVISA_M1U1_RIM25b.svg" style="cursor: pointer;">
+            <img id="botao_3" src="recursos/icones/PEPTS_EPIVISA_M1U1_RIM25c.svg" style="cursor: pointer;">
+            <img id="botao_4" src="recursos/icones/PEPTS_EPIVISA_M1U1_RIM25d.svg" style="cursor: pointer;">
+            <img id="botao_5" src="recursos/icones/PEPTS_EPIVISA_M1U1_RIM25e.svg" style="cursor: pointer;">
+        </div>
+    </div>
+    <div class="jan" id="janela_1"
+        style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
+        <div
+            style="background-color: #0c486c;display: flex;width: 300px;height: 110px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
+            <div>
+                <p style="color: white;">Notificação de casos</p>
+                <p style="color: white;">Procedimento da vigilância por meio do qual os
+                    serviços de saúde informam de modo rotineiro
+                    e obrigatório à autoridade sanitária sobre a
+                    ocorrência de eventos sujeitos à vigilância.</p>
+            </div>
+        </div>
+    </div>
+    <div class="jan" id="janela_2"
+        style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
+        <div
+            style="background-color: #0c486c;display: flex;width: 400px;height: 150px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
+            <div>
+                <p style="color: white;">Registros</p>
+                <p style="color: white;">Procedimentos realizados por instituições públicas ou
+                    privadas,
+                    com o objetivo de registrar regularmente a ocorrência de
+                    eventos. São exemplos: doenças de notificação obrigatória,
+                    nascimentos, óbitos, hospitalizações, imunizações, acidentes de
+                    trânsito, poluição ambiental, assistência escolar e ocupacional,
+                    entre outros.</p>
+            </div>
+        </div>
+    </div>
+    <div class="jan" id="janela_3"
+        style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
+        <div
+            style="background-color: #0c486c;display: flex;width: 350px;height: 150px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
+            <div>
+                <p style="color: white;">Pesquisa de casos e surtos</p>
+                <p style="color: white;">Procedimento padronizado de busca ativa e exaustiva
+                    de informação complementar sobre um ou mais casos
+                    associados a determinado evento, normalmente como
+                    resposta organizada diante da suspeita de epidemia,
+                    seja ela originada por rumores, vigilância ou análise
+                    de registros.</p>
+            </div>
+        </div>
+    </div>
+    <div class="jan" id="janela_4"
+        style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
+        <div
+            style="background-color: #0c486c;display: flex;width: 374px;height: 162px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
+            <div>
+                <p style="color: white;">Pesquisas</p>
+                <p style="color: white;">Procedimentos de coleta de informação por meio dos quais
+                    se obtém informação em um ponto específico de tempo
+                    sobre determinadas características de interesse, geralmente
+                    não disponíveis em outras fontes de dados. As pesquisas mais
+                    frequentes são as sorológicas, entomológicas, de morbidade,
+                    socioeconômicas, etnográficas e as chamadas pesquisas de
+                    demografia e saúde.</p>
+            </div>
+        </div>
+    </div>
+    <div class="jan" id="janela_5"
+        style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
+        <div
+            style="background-color: #0c486c;display: flex;width: 507px;height: 180px;border-radius: 22px;padding: 10px;justify-content: center;align-items: center;">
+            <div>
+                <p style="color: white;">Rumores</p>
+                <p style="color: white;">Opiniões espontâneas e não confirmadas que têm origem na
+                    comunidade e que
+                    são divulgadas por seus líderes e/ou pelos meios de comunicação de massa,
+                    associadas ao aumento de casos ou mortes por uma determinada causa.</p>
+                <p style="color: white;">
+                    Atualmente, encontramos fontes de dados com automatização e sistemas
+                    computacionais avançados que inclusive vinculam os registros e os disponibilizam
+                    via internet. Novamente vale destacar que a utilidade desses registros dependerá
+                    da qualidade dos dados coletados em campo (ORGANIZAÇÃO
+                    PAN-AMERICANA DA SAÚDE, 2010).</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="padding: 0; height: 40px;">
+    <img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM03_2.svg" style="width: 100%;">
+</footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

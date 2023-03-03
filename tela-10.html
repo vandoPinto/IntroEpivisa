@@ -1,8 +1,64 @@
+<style>
+    .col-4 {
+        display: flex;
+        width: 94%;
+        margin-left: 25px;
+    }
+
+    .col-4>div {
+        margin: 0 10px;
+    }
+
+    /* Cards */
+    .scene {
+        display: inline-block;
+    }
+
+    .card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        cursor: pointer !important;
+        transform-style: preserve-3d;
+        transform-origin: center right;
+        transition: transform 1s;
+    }
+
+    .card.flip {
+        transform: translateX(-111%) rotateY(-180deg);
+    }
+
+    .card-face {
+        position: absolute;
+        text-align: center;
+        backface-visibility: hidden;
+    }
+
+    .card-face-back {
+        display: flex;
+        align-items: center;
+        width: 160px;
+        height: 225px;
+        padding: 10px;
+        background-color: #6fb590;
+        transform: rotateY(180deg);
+        border-radius: 77px;
+    }
+
+    .card-face-back p {
+        color: #fff;
+        text-align: center;
+    }
+
+    .myScroll {
+        overflow: auto;
+        scrollbar-width: none;
+    }
+</style>
 <div class="largura-1_1">
     <img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM03_1.svg" style="width: 100%;margin-top: 10px;">
 </div>
-<div class="coluna-esquerda largura-1_1 "
-    style="display: flex;justify-content: center;align-items: center;height: 380px;">
+<div class="largura-1_1 " style="display: flex;align-items: center;height: 380px;flex-direction: column;">
     <div style="width: 90%;">
         <p>É possível perceber que a PNVS é transversal a todas as ações e serviços de vigilância em saúde, está
             relacionada à compreensão
@@ -10,19 +66,12 @@
         <p>Quando falamos em vigilância em saúde, estamos abrangendo as <b>quatro vigilâncias!</b></p>
         <p>Mas quais são as ações de cada componente da vigilância em saúde? <b style="color: #7abd9a;">Clique nos
                 cartões e conheça.</b></p>
-        <div style="display: flex;justify-content: space-evenly;">
-            <img id="botao_1" src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM02a.svg" style="cursor: pointer;">
-            <img id="botao_2" src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM02b.svg" style="cursor: pointer;">
-            <img id="botao_3" src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM02c.svg" style="cursor: pointer;">
-            <img id="botao_4" src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM02d.svg" style="cursor: pointer;">
-        </div>
     </div>
-    <div>
-        <div class="jan" id="janela_1"
-            style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
-            <div
-                style="background-color: #0c486c;display: flex;width: 510px;height: 160px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
-                <div style="color: white;">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-face"><img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM02a.svg"></div>
+            <div class="card-face card-face-back">
+                <div class="myScroll" style="color: white;overflow-y: scroll;height: 180px;">
                     <p>A <b>vigilância epidemiológica</b> é informação para ação! É coletar e processar os dados;
                         analisar e
                         interpretar os dados processados; divulgar as informações; investigar casos e surtos – que
@@ -35,13 +84,11 @@
                         de doenças e agravos.</p>
                 </div>
             </div>
-            <p style="color: white;position: absolute;right: 198px;top: 158px;font-weight: bold;">X</p>
         </div>
-        <div class="jan" id="janela_2"
-            style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
-            <div
-                style="background-color: #0c486c;display: flex;width: 510px;height: 170px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
-                <div style="color: white;">
+        <div class="card">
+            <div class="card-face"><img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM02b.svg"></div>
+            <div class="card-face card-face-back">
+                <div class="myScroll" style="color: white;overflow-y: scroll;height: 180px;">
                     <p>A <b>vigilância em saúde ambiental</b> atua na detecção ou prevenção de qualquer mudança nos
                         fatores
                         determinantes e condicionantes do ambiente que interferem na saúde humana, com recomendações
@@ -55,13 +102,11 @@
                         produtos perigosos, fatores físicos, e ambiente de trabalho.</p>
                 </div>
             </div>
-            <p style="color: white;position: absolute;right: 198px;top: 158px;font-weight: bold;">X</p>
         </div>
-        <div class="jan" id="janela_3"
-            style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
-            <div
-                style="background-color: #0c486c;display: flex;width: 510px;height: 120px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
-                <div style="color: white;">
+        <div class="card">
+            <div class="card-face"><img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM02c.svg"></div>
+            <div class="card-face card-face-back">
+                <div style="color: white;height: 240px;margin-top: 36px;">
                     <p>A <b>vigilância sanitária</b> envolve ações direcionadas para eliminar, mitigar ou prevenir
                         riscos à
                         saúde e de intervir nos problemas sanitários, também atua em investigação de surtos, na
@@ -69,20 +114,17 @@
                         e circulação de bens e na prestação de serviços de interesse da saúde. </p>
                 </div>
             </div>
-            <p style="color: white;position: absolute;right: 198px;top: 178px;font-weight: bold;">X</p>
         </div>
-        <div class="jan" id="janela_4"
-            style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
-            <div
-                style="background-color: #0c486c;display: flex;width: 510px;height: 110px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
-                <div style="color: white;">
+        <div class="card">
+            <div class="card-face"> <img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM02d.svg"></div>
+            <div class="card-face card-face-back">
+                <div style="color: white;height: 240px;margin-top: 48px;">
                     <p>A <b>vigilância em saúde do trabalhador</b> caracteriza-se por ser um conjunto de atividades
                         destinadas
                         à promoção e proteção, recuperação e reabilitação da saúde dos trabalhadores submetidos aos
                         riscos, doenças e agravos advindos das condições de trabalho.</p>
                 </div>
             </div>
-            <p style="color: white;position: absolute;right: 198px;top: 180px;font-weight: bold;">X</p>
         </div>
     </div>
 </div>
@@ -90,27 +132,10 @@
     <img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM03_2.svg" style="width: 100%;">
 </footer>
 <script>
-    $(() => {
-        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
-        apagarJanelas();
-        $(document).find('[id^=btn]').hide();
-        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
-            $(botao).css('cursor', 'pointer');
-            $(botao).hover(() => {
-                $(document).find(`[id=btn_${index + 1}_2]`).show();
-            });
-            $(botao).mouseleave(() => {
-                $(document).find('[id^=btn]').hide();
-            });
-            $(botao).click(() => {
-                apagarJanelas();
-                $(janelas[index]).fadeIn();
-            })
-        })
-        function apagarJanelas() {
-            janelas.map((index, janela) => {
-                $(janela).hide();
-            })
-        }
-    })
+    var cards = document.querySelectorAll('.card');
+    [...cards].forEach(card => {
+        card.addEventListener('click', function () {
+            card.classList.toggle('flip');
+        });
+    });
 </script>

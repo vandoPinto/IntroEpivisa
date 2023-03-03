@@ -1,8 +1,64 @@
+<style>
+    .col-4 {
+        display: flex;
+        width: 74%;
+        margin-left: 25px;
+    }
+
+    .col-4>div {
+        margin: 0 10px;
+    }
+
+    /* Cards */
+    .scene {
+        display: inline-block;
+    }
+
+    .card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        cursor: pointer !important;
+        transform-style: preserve-3d;
+        transform-origin: center right;
+        transition: transform 1s;
+    }
+
+    .card.flip {
+        transform: translateX(-111%) rotateY(-180deg);
+    }
+
+    .card-face {
+        position: absolute;
+        text-align: center;
+        backface-visibility: hidden;
+    }
+
+    .card-face-back {
+        display: flex;
+        align-items: center;
+        width: 160px;
+        height: 225px;
+        padding: 10px;
+        background-color: #6fb590;
+        transform: rotateY(180deg);
+        border-radius: 77px;
+    }
+
+    .card-face-back p {
+        color: #fff;
+        text-align: center;
+    }
+
+    .myScroll {
+        overflow: auto;
+        scrollbar-width: none;
+    }
+</style>
 <div class="largura-1_1">
     <img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM03_1.svg" style="width: 100%;margin-top: 10px;">
 </div>
-<div class="coluna-esquerda largura-1_1 "
-    style="display: flex;justify-content: center;align-items: center;height: 380px;">
+<div class="largura-1_1 " style="display: flex;align-items: center;height: 380px;flex-direction: column;">
     <div style="width: 90%;">
         <h1>CICLO DE VIGILÂNCIA EM SAÚDE</h1>
         <p>Cada etapa do ciclo de vigilância é composta por atividades que têm o objetivo comum de aprimorar as
@@ -12,18 +68,12 @@
             levando em consideração as normas vigentes e as condições particulares de cada área geográfica.</p>
         <p>Vamos destacar agora algumas definições importantes, <b style="color: #7abd9a;">clique nos cartões e
                 conheça.</b></p>
-        <div style="display: flex;justify-content: space-evenly;">
-            <img id="botao_1" src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM15a.svg" style="cursor: pointer;">
-            <img id="botao_2" src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM15b.svg" style="cursor: pointer;">
-            <img id="botao_3" src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM15c.svg" style="cursor: pointer;">
-        </div>
     </div>
-    <div>
-        <div class="jan" id="janela_1"
-            style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
-            <div
-                style="background-color: #0c486c;display: flex;width: 510px;height: 260px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
-                <div style="color: white;">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-face"><img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM15a.svg"></div>
+            <div class="card-face card-face-back">
+                <div class="myScroll" style="color: white;overflow-y: scroll;height: 180px;">
                     <p><b>Fontes de notificação:</b>
                         os registros são realizados por meio de sistemas de informação em saúde (SIS). Esses dados
                         são
@@ -44,13 +94,11 @@
                         por proteger a saúde das pessoas e prevenir transmissão e riscos.</p>
                 </div>
             </div>
-            <p style="color: white;position: absolute;right: 198px;top: 108px;font-weight: bold;">X</p>
         </div>
-        <div class="jan" id="janela_2"
-            style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
-            <div
-                style="background-color: #0c486c;display: flex;width: 390px;height: 140px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
-                <div style="color: white;">
+        <div class="card">
+            <div class="card-face"><img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM15b.svg"></div>
+            <div class="card-face card-face-back">
+                <div class="myScroll" style="color: white;overflow-y: scroll;height: 180px;">
                     <p><b>Instrumento de coleta de dados</b>: a qualidade de um sistema de vigilância é medida
                         frequentemente
                         pela
@@ -59,13 +107,11 @@
                     </p>
                 </div>
             </div>
-            <p style="color: white;position: absolute;right: 256px;top: 163px;font-weight: bold;">X</p>
         </div>
-        <div class="jan" id="janela_3"
-            style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
-            <div
-                style="background-color: #0c486c;display: flex;width: 460px;height: 160px;border-radius: 22px;align-items: center;justify-content: center;padding: 10px;">
-                <div style="color: white;">
+        <div class="card">
+            <div class="card-face"><img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM15c.svg"></div>
+            <div class="card-face card-face-back">
+                <div class="myScroll" style="color: white;overflow-y: scroll;height: 180px;">
                     <p><b>Periodicidade da notificação</b>: importante para realização de medidas reais com vistas a
                         nortear
                         as
@@ -81,7 +127,6 @@
                         al., 1998).</p>
                 </div>
             </div>
-            <p style="color: white;position: absolute;right: 221px;top: 158px;font-weight: bold;">X</p>
         </div>
     </div>
 </div>
@@ -89,27 +134,10 @@
     <img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM03_2.svg" style="width: 100%;">
 </footer>
 <script>
-    $(() => {
-        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
-        apagarJanelas();
-        $(document).find('[id^=btn]').hide();
-        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
-            $(botao).css('cursor', 'pointer');
-            $(botao).hover(() => {
-                $(document).find(`[id=btn_${index + 1}_2]`).show();
-            });
-            $(botao).mouseleave(() => {
-                $(document).find('[id^=btn]').hide();
-            });
-            $(botao).click(() => {
-                apagarJanelas();
-                $(janelas[index]).fadeIn();
-            })
-        })
-        function apagarJanelas() {
-            janelas.map((index, janela) => {
-                $(janela).hide();
-            })
-        }
-    })
+    var cards = document.querySelectorAll('.card');
+    [...cards].forEach(card => {
+        card.addEventListener('click', function () {
+            card.classList.toggle('flip');
+        });
+    });
 </script>

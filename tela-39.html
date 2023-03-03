@@ -51,8 +51,26 @@
     }
 
     .myScroll {
-        overflow: auto;
-        scrollbar-width: none;
+        overflow-y: scroll;
+    }
+
+    .myScroll::-webkit-scrollbar {
+        width: 8px;
+        /* width of the entire scrollbar */
+    }
+
+    .myScroll::-webkit-scrollbar-track {
+        background: white;
+        /* color of the tracking area */
+    }
+
+    .myScroll::-webkit-scrollbar-thumb {
+        background-color: #16344a;
+        /* color of the scroll thumb */
+        border-radius: 20px;
+        /* roundness of the scroll thumb */
+        border: 8px solid #16344a;
+        /* creates padding around scroll thumb */
     }
 </style>
 <div class="largura-1_1">
@@ -73,8 +91,8 @@
         <div class="card">
             <div class="card-face"><img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM15a.svg"></div>
             <div class="card-face card-face-back">
-                <div class="myScroll" style="color: white;overflow-y: scroll;height: 180px;">
-                    <p><b>Fontes de notificação:</b>
+                <div class="myScroll" style="color: white;height: 180px;">
+                    <p style="color: #16344a;font-size: 12px;"><b>Fontes de notificação:</b>
                         os registros são realizados por meio de sistemas de informação em saúde (SIS). Esses dados
                         são
                         produzidos por setores da saúde, como a vigilância, a administração e a gestão de serviços,
@@ -87,7 +105,8 @@
                         de Informações sobre Agravos de Notificação (SINAN), Sistema de Informações Ambulatoriais do
                         SUS
                         (SIA/SUS) e Sistema de Informações Hospitalares do SUS (SIH-SUS) (OLIVEIRA, 2000).</p>
-                    <p>O ato de notificar em si independe de fontes de notificação. Significa um ato de comunicar,
+                    <p style="color: #16344a;font-size: 12px;">O ato de notificar em si independe de fontes de
+                        notificação. Significa um ato de comunicar,
                         seja
                         mandar e-mail, telefonar, mandar WhatsApp etc., isto é, fazer saber algo às autoridades
                         responsáveis
@@ -99,7 +118,8 @@
             <div class="card-face"><img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM15b.svg"></div>
             <div class="card-face card-face-back">
                 <div class="myScroll" style="color: white;overflow-y: scroll;height: 180px;">
-                    <p><b>Instrumento de coleta de dados</b>: a qualidade de um sistema de vigilância é medida
+                    <p style="color: #16344a;font-size: 12px;"><b>Instrumento de coleta de dados</b>: a qualidade de um
+                        sistema de vigilância é medida
                         frequentemente
                         pela
                         qualidade dos dados coletados por meio de questionários, entrevistas, observações, análise
@@ -112,7 +132,8 @@
             <div class="card-face"><img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM15c.svg"></div>
             <div class="card-face card-face-back">
                 <div class="myScroll" style="color: white;overflow-y: scroll;height: 180px;">
-                    <p><b>Periodicidade da notificação</b>: importante para realização de medidas reais com vistas a
+                    <p style="color: #16344a;font-size: 12px;"><b>Periodicidade da notificação</b>: importante para
+                        realização de medidas reais com vistas a
                         nortear
                         as
                         políticas públicas, a fim de conter a disseminação de doenças e agravos na população. As

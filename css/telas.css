@@ -239,7 +239,7 @@ footer {
 }
 
 .nav-telas-progresso .tela-visualizada {
-    background-color: var(--color-orange);
+    background-color: #d5efa8;
 }
 
 .nav-telas-progresso a>span>span {

@@ -1,32 +1,32 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'); */
 
 @font-face {
-    font-family: "OpenSans";
-    src: url('../recursos/fonts/OpenSans-Regular.ttf');
+    font-family: "Lato";
+    src: url('../recursos/fonts/Lato-Regular.ttf');
 }
 
 @font-face {
-    font-family: "OpenSans";
-    src: url('../recursos/fonts/OpenSans-Medium.ttf');
+    font-family: "Lato";
+    src: url('../recursos/fonts/Lato-Medium.ttf');
     font-weight: 500;
 }
 
 @font-face {
-    font-family: "OpenSans";
-    src: url('../recursos/fonts/OpenSans-Bold.ttf');
+    font-family: "Lato";
+    src: url('../recursos/fonts/Lato-Bold.ttf');
     font-weight: bold;
 }
 
 @font-face {
-    font-family: "OpenSans";
-    src: url('../recursos/fonts/OpenSans-ExtraBold.ttf');
+    font-family: "Lato";
+    src: url('../recursos/fonts/Lato-ExtraBold.ttf');
     font-weight: 800;
 }
 
 html,
 body,
 html * {
-    font-family: 'OpenSans', sans-serif;
+    font-family: 'Lato', sans-serif;
     line-height: 1.2;
 }
 
@@ -301,7 +301,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'OpenSans', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     color: var(--color-blue1);
 }

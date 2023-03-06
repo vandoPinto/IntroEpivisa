@@ -32,6 +32,7 @@
         position: absolute;
         text-align: center;
         backface-visibility: hidden;
+        background: #6fb590;
     }
 
     .card-face-back {
@@ -42,7 +43,7 @@
         padding: 10px;
         background-color: #6fb590;
         transform: rotateY(180deg);
-        border-radius: 77px;
+        /* border-radius: 77px; */
     }
 
     .card-face-back p {
@@ -52,7 +53,7 @@
 
     .myScroll {
         overflow: auto;
-        scrollbar-width: none;
+        scrollbar-width: flex;
     }
 
     .myScroll::-webkit-scrollbar {
@@ -91,7 +92,9 @@
             <div class="card-face"><img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM02a.svg"></div>
             <div class="card-face card-face-back">
                 <div class="myScroll" style="color: white;overflow-y: scroll;height: 180px;">
-                    <p style="color: #16344a;font-size: 12px;">A <b>vigilância epidemiológica</b> é informação para
+                    <p style="color: #16344a;font-size: 12px;">A <span id="hotWord-bt_1"
+                            style="background-color: rgb(201, 238, 149); color: rgb(12, 72, 108);"><b>vigilância
+                                epidemiológica</b></span> é informação para
                         ação! É coletar e processar os dados;
                         analisar e
                         interpretar os dados processados; divulgar as informações; investigar casos e surtos – que
@@ -111,7 +114,9 @@
             <div class="card-face"><img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM02b.svg"></div>
             <div class="card-face card-face-back">
                 <div class="myScroll" style="color: white;overflow-y: scroll;height: 180px;">
-                    <p style="color: #16344a;font-size: 12px;">A <b>vigilância em saúde ambiental</b> atua na
+                    <p style="color: #16344a;font-size: 12px;">A <span id="hotWord-bt_2"
+                            style="background-color: rgb(201, 238, 149); color: rgb(12, 72, 108);"><b>vigilância em
+                                saúde ambiental</b></span> atua na
                         detecção
                         ou prevenção de qualquer mudança nos
                         fatores
@@ -131,7 +136,9 @@
             <div class="card-face"><img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM02c.svg"></div>
             <div class="card-face card-face-back">
                 <div style="color: white;height: 240px;margin-top: 36px;">
-                    <p style="color: #16344a;font-size: 12px;">A <b>vigilância sanitária</b> envolve ações
+                    <p style="color: #16344a;font-size: 12px;">A <span id="hotWord-bt_3"
+                            style="background-color: rgb(201, 238, 149); color: rgb(12, 72, 108);"><b>vigilância
+                                sanitária</b></span> envolve ações
                         direcionadas
                         para eliminar, mitigar ou prevenir
                         riscos à
@@ -145,7 +152,9 @@
             <div class="card-face"> <img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM02d.svg"></div>
             <div class="card-face card-face-back">
                 <div style="color: white;height: 240px;margin-top: 48px;">
-                    <p style="color: #16344a;font-size: 12px;">A <b>vigilância em saúde do trabalhador</b>
+                    <p style="color: #16344a;font-size: 12px;">A <span id="hotWord-bt_4"
+                            style="background-color: rgb(201, 238, 149); color: rgb(12, 72, 108);"><b>vigilância em
+                                saúde do trabalhador</b></span>
                         caracteriza-se por ser um conjunto de atividades
                         destinadas
                         à promoção e proteção, recuperação e reabilitação da saúde dos trabalhadores submetidos aos
@@ -158,6 +167,35 @@
 <footer style="padding: 0; height: 40px;">
     <img src="recursos/imgs/PEPTS_EPIVISA_M1U1_RIM03_2.svg" style="width: 100%;">
 </footer>
+
+<div id="conteudo_1"
+    style="position: absolute; top: 255px; left: 10px; width: 355px; height: 120px; background: 0% 0% no-repeat padding-box padding-box rgb(201, 238, 149); display: flex; align-items: center; justify-content: center; padding: 10px;">
+    <p style="color: #0c486c;">Conjunto de ações que proporcionam o conhecimento e a detecção de mudanças nos fatores
+        determinantes e condicionantes da saúde individual e coletiva, com a finalidade de recomendar e adotar as
+        medidas de prevenção e controle das doenças, transmissíveis e não transmissíveis, e agravos à saúde. </p>
+</div>
+<div id="conteudo_2"
+    style="position: absolute; top: 75px; left: 150px; width: 355px; height: 120px; background: 0% 0% no-repeat padding-box padding-box rgb(201, 238, 149); display: flex; align-items: center; justify-content: center; padding: 10px;">
+    <p style="color: #0c486c;">Conjunto de ações e serviços que propiciam o conhecimento e a detecção de mudanças nos
+        fatores determinantes e condicionantes do meio ambiente que interferem na saúde humana, com a finalidade de
+        recomendar e adotar medidas de promoção à saúde, prevenção e monitoramento dos fatores de riscos relacionados às
+        doenças ou agravos à saúde. </p>
+</div>
+<div id="conteudo_3"
+    style="position: absolute; top: 255px; left: 360px; width: 355px; height: 120px; background: 0% 0% no-repeat padding-box padding-box rgb(201, 238, 149); display: flex; align-items: center; justify-content: center; padding: 10px;">
+    <p style="color: #0c486c;">Conjunto de ações capazes de eliminar, diminuir ou prevenir riscos à saúde e de intervir
+        nos problemas sanitários decorrentes do ambiente, da produção e circulação de bens e da prestação de serviços do
+        interesse da saúde. Abrange a prestação de serviços e o controle de bens de consumo que, direta ou
+        indiretamente, relacionem-se com a saúde, compreendidas todas as etapas e processos, da produção ao consumo e
+        descarte.</p>
+</div>
+<div id="conteudo_4"
+    style="position: absolute; top: 81px; left: 500px; width: 355px; height: 120px; background: 0% 0% no-repeat padding-box padding-box rgb(201, 238, 149); display: flex; align-items: center; justify-content: center; padding: 10px;">
+    <p style="color: #0c486c;">Conjunto de ações que visam a promoção da saúde, prevenção da morbimortalidade e redução
+        de riscos e vulnerabilidades na população trabalhadora, por meio da integração de ações que intervenham nas
+        doenças e agravos e seus determinantes decorrentes dos modelos de desenvolvimento, de processos produtivos e de
+        trabalho.</p>
+</div>
 <script>
     var cards = document.querySelectorAll('.card');
     [...cards].forEach(card => {
@@ -165,4 +203,17 @@
             card.classList.toggle('flip');
         });
     });
+    $(() => {
+
+        let conteudo = $(document).find('[id^=conteudo]').hide();
+
+        let botoes = $(document).find('[id^=hotWord-bt]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer').hover(() => {
+                $(document).find(`[id=conteudo_${index + 1}]`).fadeIn();
+            })
+            $(botao).mouseout(() => {
+                $(document).find(`[id=conteudo_${index + 1}]`).fadeOut()
+            })
+        })
+    })
 </script>

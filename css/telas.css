@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: "Lato";
-    src: url('../recursos/fonts/Lato-Medium.ttf');
+    src: url('../recursos/fonts/Lato-Regular.ttf');
     font-weight: 500;
 }
 
@@ -19,7 +19,7 @@
 
 @font-face {
     font-family: "Lato";
-    src: url('../recursos/fonts/Lato-ExtraBold.ttf');
+    src: url('../recursos/fonts/Lato-Bold.ttf');
     font-weight: 800;
 }
 
@@ -395,7 +395,8 @@ a:hover {
 .saiba-mais-modal .close {
     width: 20px;
     height: 20px;
-    background-color: var(--color-orange);;
+    background-color: var(--color-orange);
+    ;
     position: absolute;
     right: 0px;
     top: -24px;

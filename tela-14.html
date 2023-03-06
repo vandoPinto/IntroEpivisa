@@ -40,7 +40,7 @@
         </div>
         <div id="janela_1" style="display: flex; align-items: center; justify-content: space-around; cursor: pointer;">
             <div
-                style="background-color: #d5efa8;display: flex;align-items: flex-start;justify-content: space-around;width: 740px;height: 280px;border-radius: 22px;position: absolute;top: 167px;left: 127px;z-index: 9;">
+                style="background-color: #d5efa8;display: flex;align-items: flex-start;justify-content: space-around;width: 740px;height: 280px;border-radius: 22px;position: absolute;top: 167px;left: 130px;z-index: 9;">
                 <div class="myScroll"
                     style="width: 651px;overflow-y: scroll;height: 260px;width: 700px;margin-top: 11px;">
                     <p>I – Conhecimento do território. Conhecer os territórios por meio da utilização da
@@ -93,7 +93,7 @@
         <div id="janela_2"
             style="align-items: center; justify-content: space-around; margin: 30px; cursor: pointer; display: none;">
             <div
-                style="background-color: rgb(137, 187, 156);display: flex;align-items: flex-start;justify-content: space-around;width: 740px;height: 280px;border-radius: 22px;position: absolute;top: 167px;left: 127px;z-index: 9;">
+                style="background-color: rgb(137, 187, 156);display: flex;align-items: flex-start;justify-content: space-around;width: 740px;height: 280px;border-radius: 22px;position: absolute;top: 167px;left: 129px;z-index: 9;">
                 <div class="myScroll"
                     style="width: 651px;overflow-y: scroll;height: 260px;width: 700px;margin-top: 11px;">
                     <p>I – Articular e pactuar responsabilidades das três esferas de governo, consonante com os
@@ -158,7 +158,7 @@
 <script>
     $(() => {
         let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
-        apagarJanelas();
+        // apagarJanelas();
         $(document).find('[id^=btn]').hide();
         let botoes = $(document).find('[id^=botao]').map((index, botao) => {
             $(botao).css('cursor', 'pointer');
@@ -170,7 +170,7 @@
             });
             $(botao).click(() => {
                 apagarJanelas();
-                $(janelas[index]).fadeIn();
+                $(janelas[index]).show();
             })
         })
         function apagarJanelas() {
